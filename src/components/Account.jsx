@@ -24,14 +24,14 @@ function MyAccount() {
           </div>
           <div className="flex-grow-1 align-self-start">
             <Row className="w-100 px-4">
-              <div className="col-12">
+              <Col xs={12}>
                 <Button
                   variant="secondary"
                   className=" rounded-0  w-100 text-start mb-4 mt-2"
                 >
                   Strive Student
                 </Button>
-              </div>
+              </Col>
               <Col className="text-start">
                 <p className="text-white mb-1">Language:</p>
 
@@ -50,7 +50,7 @@ function MyAccount() {
 
             {/* <!-- ROW 2 --> */}
             <Row className=" w-100 px-4">
-              <Col className="col-12 text-start">
+              <Col xs={12} className=" text-start">
                 <p className="text-white mb-1">Maturity Settings:</p>
                 <Button variant="secondary" className=" rounded-0 mb-4 mt-2">
                   ALL MATURITY RATINGS
@@ -67,7 +67,7 @@ function MyAccount() {
             </Row>
             {/* <!-- ROW 3 --> */}
             <Row className=" w-100 px-4">
-              <Col className="col-12 px-0">
+              <Col xs={12} className="px-0">
                 <p className="text-white mb-1">Autoplay Controls</p>
                 {/* FORM CON LE CHECKBOXS */}
                 <Form>

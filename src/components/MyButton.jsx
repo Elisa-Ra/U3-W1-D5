@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { Button, Container } from "react-bootstrap"
 import Account from "./Account"
+import MySettings from "./MySettings"
 
 function AccountToggle() {
   const [visible, setVisible] = useState(false)
@@ -12,8 +13,9 @@ function AccountToggle() {
         {visible ? "Nascondi Account" : "Mostra Account"}
       </Button>
 
-      <Container className={visible ? "d-flex mt-3" : "d-none"}>
+      <Container className={visible ? "d-flex flex-column mt-3" : "d-none"}>
         <Account />
+        <MySettings />
       </Container>
     </Container>
   )
