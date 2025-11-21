@@ -9,6 +9,7 @@
 import { Component } from "react"
 import { Container, Row, Col, Carousel } from "react-bootstrap"
 import Loading from "./Loading"
+import Error from "./Error"
 import MyCarousel from "./Carousel"
 
 const url = "https://www.omdbapi.com/?apikey=6d470a61&s="
@@ -60,9 +61,7 @@ class MyMovies extends Component {
       <Container fluid className="mt-4 mb-5">
         <h4 className="text-white mb-3">{this.props.title}</h4>
         {this.state.isLoading && <Loading />}
-        {this.state.isError && (
-          <div className="text-danger">Errore nel caricamento</div>
-        )}
+        {this.state.isError && <Error />}
 
         {!this.state.isLoading && !this.state.isError && (
           <MyCarousel movies={this.state.movies} />
