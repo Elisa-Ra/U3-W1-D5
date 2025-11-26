@@ -22,3 +22,4 @@ function AccountToggle() {
 }
 
 export default AccountToggle
+// NOTA BENE: Questo componente NON SERVE PIÙ perché ho implementato il routing tra le pagine
