@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import MySettings from "./components/MySettings"
 import MyAccount from "./components/Account"
 import TVShows from "./components/TVShows"
+import MovieDetails from "./components/MovieDetails"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/settings" element={<MySettings />} />
           <Route path="/account" element={<MyAccount />} />
           <Route path="/tvshows" element={<TVShows />} />
+          <Route path="/movie-details/:movieId" element={<MovieDetails />} />
           <Route path="/movies" element={<Home />} />
           <Route path="/recent" element={<Home />} />
           <Route path="/mylist" element={<Home />} />
