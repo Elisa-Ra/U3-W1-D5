@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar } from "react-bootstrap"
+import { Container, Nav, Navbar, Dropdown } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
 import logo from "../assets/logo.png"
 
@@ -77,7 +77,25 @@ function MyNavbar() {
               KIDS
             </div>
             <i className="bi bi-bell icons ms-3"></i>
-            <i className="bi bi-person-circle icons ms-3"></i>
+
+            <Dropdown drop="start">
+              <Dropdown.Toggle
+                variant="link"
+                id="profile-dropdown"
+                className="p-0"
+              >
+                <i className="bi bi-person-circle icons ms-3"></i>
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu align="end">
+                <Dropdown.Item as={NavLink} to="/account">
+                  Account
+                </Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/settings">
+                  Settings
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </div>
         </Navbar.Collapse>
       </Container>
